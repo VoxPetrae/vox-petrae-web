@@ -1,0 +1,1 @@
+Green peg in position 2 has correct color and correct position. Green peg in position 1 has correct color, but wrong position. Red peg in position 3 has correct color, but wrong position.

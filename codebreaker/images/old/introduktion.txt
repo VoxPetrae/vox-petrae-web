@@ -1,0 +1,1 @@
+This is a development of the classic Master Mind game. The key pegs come in four varieties, see "Advanced stuff". Enjoy!

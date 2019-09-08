@@ -1,0 +1,3 @@
+The default setting is "Max", which means that you play with the maximum number of positions, colors, shapes (circle, square, cross and star),
+ and guesses. This is the most fun IMHO. But you can play around with the settings and for instance play with only one color and all four shapes.
+ There are all kinds of options.

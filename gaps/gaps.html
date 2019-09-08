@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Gaps</title>
+        <style type="text/css" media="screen, projection">@import 'css/gaps.css'; </style>
+		<script type="text/javascript" src="javascript/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="javascript/gaps.js"></script>
+        <script type="text/javascript" src="javascript/model.js"></script>
+    </head>
+    <body>
+		<div id="info">
+			<a id="presentationLink" href="#">Info</a>
+			<div id="presentation">
+				<p>This is a variant of the solitaire "Gaps", a.k.a. "Montana". Its overall goal is to arrange all
+				cards (except the aces) in suit from left (2) to right (King), with one row for each suite. My father taught me the rules when
+				I was a kid, and it might be a little less boring than the average solitaire. I originally wrote it as a Java applet, but ported
+				it to html/JQuery when applet support ceased. The goofy looking cards are my own artwork. Amazing what you can do with MS Paint and a day off! :)</p>
+				<h2>The rules (don't bother to read them, you'll figure it out anyway)</h2>
+				<ol>
+				<li>Shuffle the deck and place all cards, face up, on the table in 4 rows with 13 columns.</li>
+				<li>Remove the aces, leaving 48 cards on the table and creating 4 gaps (empty cells) in the grid.</li>
+				<li>You may move a card to a gap if the card on the left of the gap is the same suit and one rank lower than the card to move.</li>
+				<li>For example: a Jack of clubs may be placed to the right of a 10 of clubs. The opposite is not allowed: you cannot place a card to the left of a higher ranked card.</li>
+				<li>A gap after a King is a dead end; you cannot place any card there which means that 4 gaps after Kings ends the round.</li>
+				<li>If there is a gap at the beginning of a row, you should fill it with a 2 and start building a suit (i.e. 2 of hearts, 3 of hearts, 4 of hearts, 5 of hearts, etc).</li>
+				<li>When there are no more possible moves to make ("4 gaps after Kings"), the round is finished. If by then all 48 cards are in suit, the solitaire is won.</li>
+				<li>If not, gather the unsuited cards so that the only remaining cards on the table are the ones ordered from 2 and up as described above. Remember that only sequences beginning at the first cell in a row count as suited.</li>
+				<li>Put the aces back among the gathered cards and shuffle. Then redeal the cards on the table by filling the empty cells in the 4 by 13 grid. Remove the aces, once again creating 4 gaps in the grid.</li>
+				<li>Continue building suites as described above. You have 3 tries.</li>
+				<li>The program will do all the shuffling and dealing for you. Just click away and enjoy the game!</li>
+				</ol>
+			</div>
+		</div>
+		<p id="header"><span id="letter_g">G</span><span class="letter_gaps">-</span><span id="letter_a">A</span><span class="letter_gaps">-</span><span id="letter_p">P</span><span class="letter_gaps">-</span><span id="letter_s">S</span></p>
+	    <!--    td id's: for unique identifiers
+            td class cp: to iterate through all card places
+            td class blank unmarked, tenOfClubs etc: to set card graphics
+        -->
+        <table>
+            <!-- ROW 1 -->
+            <tr>
+                <td><div id="pos0" class="cp blank unmarked"></div></td>
+                <td><div id="pos1" class="cp blank unmarked"></div></td>
+                <td><div id="pos2" class="cp blank unmarked"></div></td>
+                <td><div id="pos3" class="cp blank unmarked"></div></td>
+                <td><div id="pos4" class="cp blank unmarked"></div></td>
+                <td><div id="pos5" class="cp blank unmarked"></div></td>
+                <td><div id="pos6" class="cp blank unmarked"></div></td>
+                <td><div id="pos7" class="cp blank unmarked"></div></td>
+                <td><div id="pos8" class="cp blank unmarked"></div></td>
+                <td><div id="pos9" class="cp blank unmarked"></div></td>
+                <td><div id="pos10" class="cp blank unmarked"></div></td>
+                <td><div id="pos11" class="cp blank unmarked"></div></td>
+                <td><div id="pos12" class="cp blank unmarked"></div></td>
+            </tr>
+            <!-- ROW 2 -->
+            <tr>
+                <td><div id="pos13" class="cp blank unmarked"></div></td>
+                <td><div id="pos14" class="cp blank unmarked"></div></td>
+                <td><div id="pos15" class="cp blank unmarked"></div></td>
+                <td><div id="pos16" class="cp blank unmarked"></div></td>
+                <td><div id="pos17" class="cp blank unmarked"></div></td>
+                <td><div id="pos18" class="cp blank unmarked"></div></td>
+                <td><div id="pos19" class="cp blank unmarked"></div></td>
+                <td><div id="pos20" class="cp blank unmarked"></div></td>
+                <td><div id="pos21" class="cp blank unmarked"></div></td>
+                <td><div id="pos22" class="cp blank unmarked"></div></td>
+                <td><div id="pos23" class="cp blank unmarked"></div></td>
+                <td><div id="pos24" class="cp blank unmarked"></div></td>
+                <td><div id="pos25" class="cp blank unmarked"></div></td>
+            </tr>
+            <!-- ROW 3 -->
+            <tr>
+                <td><div id="pos26" class="cp blank unmarked"></div></td>
+                <td><div id="pos27" class="cp blank unmarked"></div></td>
+                <td><div id="pos28" class="cp blank unmarked"></div></td>
+                <td><div id="pos29" class="cp blank unmarked"></div></td>
+                <td><div id="pos30" class="cp blank unmarked"></div></td>
+                <td><div id="pos31" class="cp blank unmarked"></div></td>
+                <td><div id="pos32" class="cp blank unmarked"></div></td>
+                <td><div id="pos33" class="cp blank unmarked"></div></td>
+                <td><div id="pos34" class="cp blank unmarked"></div></td>
+                <td><div id="pos35" class="cp blank unmarked"></div></td>
+                <td><div id="pos36" class="cp blank unmarked"></div></td>
+                <td><div id="pos37" class="cp blank unmarked"></div></td>
+                <td><div id="pos38" class="cp blank unmarked"></div></td>
+            </tr>
+            <!-- ROW 4 -->
+            <tr>
+                <td><div id="pos39" class="cp blank unmarked"></div></td>
+                <td><div id="pos40" class="cp blank unmarked"></div></td>
+                <td><div id="pos41" class="cp blank unmarked"></div></td>
+                <td><div id="pos42" class="cp blank unmarked"></div></td>
+                <td><div id="pos43" class="cp blank unmarked"></div></td>
+                <td><div id="pos44" class="cp blank unmarked"></div></td>
+                <td><div id="pos45" class="cp blank unmarked"></div></td>
+                <td><div id="pos46" class="cp blank unmarked"></div></td>
+                <td><div id="pos47" class="cp blank unmarked"></div></td>
+                <td><div id="pos48" class="cp blank unmarked"></div></td>
+                <td><div id="pos49" class="cp blank unmarked"></div></td>
+                <td><div id="pos50" class="cp blank unmarked"></div></td>
+                <td><div id="pos51" class="cp blank unmarked"></div></td>
+            </tr>
+        </table>
+        <table id="info">
+            <tr><td id="deals"></td><td id="gaps"></td><td id="btn"><input type="button" id="newDeal" value="Redeal"/></td></tr>
+            <tr><td colspan="3" id="message">G-A-P-S</td></tr>
+		</table>
+		<div id="backLink">
+			<a href="../index.html">Start page</a>
+		</div>
+	</body>
+</html>

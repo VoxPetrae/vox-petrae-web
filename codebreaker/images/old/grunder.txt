@@ -1,0 +1,1 @@
+There are some additional correcting rules when you play with more than one type of code pegs:&The black and white key pegs (for feedback) work as usual, but two more types are used in addition.&The black key peg with white center means "correct color and position, but wrong shape".&The white key peg with black center means "correct color, but wrong position and shape".

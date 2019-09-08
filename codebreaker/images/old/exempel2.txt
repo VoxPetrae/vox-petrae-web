@@ -1,0 +1,1 @@
+Red star in position 5 has correct color, shape and position. Green square in position 2 has correct color and position, but wrong shape. Blue disc in position 1 has correct color and shape, but wrong position. Red square in position 3 has correct color, but wrong shape and position.

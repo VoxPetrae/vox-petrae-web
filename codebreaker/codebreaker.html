@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Codebreaker</title>
+        <style type="text/css" media="screen, projection">@import 'css/codebreaker.css'; </style>
+	</head>
+    <body>
+		<div id="info">
+			<a id="presentationLink" href="#">Info</a>
+			<div id="presentation">
+				<p>Codebreaker is a permutation of the old game family Mastermind/Cows and Bulls. The guess pegs come in 12 colors and 4 shapes,
+				and there are 4 kinds of key pegs for the feedback phase. A bit more complicated than the standard variant with only 2 key pegs
+				(black and white), but also more fun. I wrote my first version of this game back in the 80:s on my Atari ST (oh, the nostalgia...).
+				The language was GFA Basic which was way better than the Atari's abysmal built-in Basic dialect. I missed the line numbers though;
+				Basic without line numbers just doesn't feel right... :)</p>
+				<p>Long after that, I made a Java version as a course assignment during my education. Later came other versions with more elaborated rules and
+				all sorts of configuration options. The latest iteration is this JavaScript program, which I wrote as a little exercise in DOM 
+				manipulation techniques.</p>
+				<h2>The rules (assuming you are familiar with the ordinary Mastermind rules)</h2>
+				<p>Duplicates are allowed, for instance 2 yellow squares or 6 magenta stars. Blanks, however, are not allowed; there will be no empty key holes in the solution code.</p>
+				<p>The four key pegs work like this:<br />
+				<span><img src="images/black.png" alt="key peg"/></span>Black: right color, right shape, right position.<br />
+				<span><img src="images/black-white.png" alt="key peg"/></span>Black-white: right color, wrong shape, right position.<br />
+				<span><img src="images/white.png" alt="key peg"/></span>White: right color, right shape, wrong position.<br />
+				<span><img src="images/white-black.png" alt="key peg"/></span>White-black: right color, wrong shape, wrong position.</p>
+				<p>If a guess matches two conditions, the above order is also the order in which the conflict will be solved.
+				If, for instance, the solution code looks like this:
+				<div class="sample"><img src="images/solution.png" alt="code"/></div>
+				And the guess looks like this:
+				<div class="sample"><img src="images/guess.png" alt="guess"/></div>
+				Then "cyan square gets white key peg" has precedence over "cyan disc gets white-black key peg". Hence the white key peg in the feedback bar.</p>
+				<p>It takes some time to get used to the rules, but once you get the hang of it you'll be able to crack most codes within 12 tries. So good luck, and
+				mind the sound effect at the end... :)</p>
+			</div>
+		</div>
+		<h1 id="header">Codebreaker</h1>
+	    <div id="gameBoard">
+		</div>
+        <!-- Dynamic table/game board goes here -->
+        <div id="backLink">
+			<a href="../index.html">Start page</a>
+		</div>
+		<!-- <script type="text/javascript" src="javascript/model.js"></script> -->
+		<script type="text/javascript" src="javascript/events.js"></script>
+		<script type="text/javascript" src="javascript/setup.js"></script>
+		<script type="text/javascript" src="javascript/codebreaker.js"></script>
+		<audio id="winSound">
+			<source src="sounds/win.wav" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio> 
+		<audio id="looseSound">
+			<source src="sounds/loose.wav" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio>
+	</body>
+</html>

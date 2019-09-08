@@ -1,0 +1,340 @@
+root { 
+    display: block;
+}
+/* Global reset, thanks to http://meyerweb.com/eric/thoughts/2007/04/12/reset-styles/ */
+html,body,div,span,
+applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+dd,dl,dt,li,ol,ul,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	line-height: 1;
+	font-family: inherit;
+	text-align: left;
+}
+
+ol,ul {
+	margin-left: 10px;
+	/*list-style: none;*/
+}
+q:before,q:after,
+blockquote:before,blockquote:after {
+	content: "";
+}
+/* End global reset */
+body {
+    /*background: #F4A460;*/
+    background: #EB8A44;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    font-family: "arial", "sans-serif";
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+p#header{
+	width: 992px;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	font-family: "arial", "sans-serif";
+	font-size: 2em;
+}
+span#letter_g, span#letter_a, span#letter_p, span#letter_s, span.letter_gaps{
+	display: inline-block;
+	font-size: 3em;
+    font-weight: bold;
+	margin-bottom: .1em;
+}
+span#letter_g{
+	color: yellow;
+}
+span#letter_a{
+	color: blue;
+}
+span#letter_p{
+	color: red;
+}
+span#letter_s{
+	color: white;
+}
+span.letter_gaps{
+	color: #4B7447
+}
+div#info{
+	margin-top: 20px;
+	margin-left: auto;
+    margin-right: auto;
+	width: 992px;
+	text-align: right; 
+}
+#presentation{
+	/*width: 100%;*/
+	color: #4B7447;
+	font-size: 1.1em;
+	margin-top: .2em;
+	margin-bottom: 1em;
+    padding: 15px 15px 15px 15px;
+	border: 1px solid #4B7447;
+	background: #F9DC24;
+	display: none;
+}
+
+a#presentationLink{
+	color: #F9DC24;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-decoration: none;
+	
+}
+#presentation h2{
+	font-weight: bold;
+	margin-top: .5em;
+	margin-bottom: .3em;
+	font-size: 1.1em;
+}
+#presentation ol{
+	margin-left: 1em;
+}
+#presentation ol li{
+	margin-bottom: .3em;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 0;
+    padding: 0;
+    border: 1px solid #4B7447;
+    background: #4B7447
+}
+table td#debug{
+	background: black !important;
+	color: yellow;	
+}
+#message {
+    /*border: 1px solid #FFF;*/
+}
+table#info {
+    width: 992px;
+}
+table#info td {
+    font-size: 1.1em;
+    padding: .2em;
+    /*border: 1px solid #FFF;*/
+    text-align: center;
+    background: #F9DC24;
+}
+td div {
+    width: 70px;
+    height: 110px;
+}
+#backLink{
+	margin-top: 1em;
+	margin-left: auto;
+    margin-right: auto;
+	width: 992px;
+	text-align: right; 
+}
+#backLink a{
+	color: #F9DC24;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-decoration: none;
+}
+.unmarked {
+    border: 2px solid #4B7447;
+}
+/* .unmarked.blank { */
+	/* border: 1px solid #FFF; */
+/* } */
+.marked {
+    border: 2px solid #FFF;
+}
+.markedAsDestination {
+    border: 2px solid #FFF;
+}
+.redsuite {
+    border: 2px solid #FF0000;
+}
+.blacksuite {
+    border: 2px solid #000;
+}
+#test {
+   margin: 50px;
+}
+.blank {
+    background: #4B7447;
+}
+ /* Hearts */
+.acOfHe {
+    background:url(../images/aceOfHearts.PNG) no-repeat;
+}
+.twOfHe {
+    background:url(../images/twoOfHearts.PNG) no-repeat;
+}
+.thOfHe {
+    background:url(../images/threeOfHearts.PNG) no-repeat;
+}
+.foOfHe {
+    background:url(../images/fourOfHearts.PNG) no-repeat;
+}
+.fiOfHe {
+    background:url(../images/fiveOfHearts.PNG) no-repeat;
+}
+.siOfHe {
+    background:url(../images/sixOfHearts.PNG) no-repeat;
+}
+.seOfHe {
+    background:url(../images/sevenOfHearts.PNG) no-repeat;
+}
+.eiOfHe {
+    background:url(../images/eightOfHearts.PNG) no-repeat;
+}
+.niOfHe {
+    background:url(../images/nineOfHearts.PNG) no-repeat;
+}
+.teOfHe {
+    background:url(../images/tenOfHearts.PNG) no-repeat;
+}
+.jaOfHe {
+    background:url(../images/jackOfHearts.PNG) no-repeat;
+}
+.quOfHe {
+    background:url(../images/queenOfHearts.PNG) no-repeat;
+}
+.kiOfHe {
+    background:url(../images/kingOfHearts.PNG) no-repeat;
+}
+/* Spades */
+.acOfSp {
+    background:url(../images/aceOfSpades.PNG) no-repeat;
+}
+.twOfSp {
+    background:url(../images/twoOfSpades.PNG) no-repeat;
+}
+.thOfSp {
+    background:url(../images/threeOfSpades.PNG) no-repeat;
+}
+.foOfSp {
+    background:url(../images/fourOfSpades.PNG) no-repeat;
+}
+.fiOfSp {
+    background:url(../images/fiveOfSpades.PNG) no-repeat;
+}
+.siOfSp {
+    background:url(../images/sixOfSpades.PNG) no-repeat;
+}
+.seOfSp {
+    background:url(../images/sevenOfSpades.PNG) no-repeat;
+}
+.eiOfSp {
+    background:url(../images/eightOfSpades.PNG) no-repeat;
+}
+.niOfSp {
+    background:url(../images/nineOfSpades.PNG) no-repeat;
+}
+.teOfSp {
+    background:url(../images/tenOfSpades.PNG) no-repeat;
+}
+.jaOfSp {
+    background:url(../images/jackOfSpades.PNG) no-repeat;
+}
+.quOfSp {
+    background:url(../images/queenOfSpades.PNG) no-repeat;
+}
+.kiOfSp {
+    background:url(../images/kingOfSpades.PNG) no-repeat;
+}
+/* Diamonds */
+.acOfDi {
+    background:url(../images/aceOfDiamonds.PNG) no-repeat;
+}
+.twOfDi {
+    background:url(../images/twoOfDiamonds.PNG) no-repeat;
+}
+.thOfDi {
+    background:url(../images/threeOfDiamonds.PNG) no-repeat;
+}
+.foOfDi {
+    background:url(../images/fourOfDiamonds.PNG) no-repeat;
+}
+.fiOfDi {
+    background:url(../images/fiveOfDiamonds.PNG) no-repeat;
+}
+.siOfDi {
+    background:url(../images/sixOfDiamonds.PNG) no-repeat;
+}
+.seOfDi {
+    background:url(../images/sevenOfDiamonds.PNG) no-repeat;
+}
+.eiOfDi {
+    background:url(../images/eightOfDiamonds.PNG) no-repeat;
+}
+.niOfDi {
+    background:url(../images/nineOfDiamonds.PNG) no-repeat;
+}
+.teOfDi {
+    background:url(../images/tenOfDiamonds.PNG) no-repeat;
+}
+.jaOfDi {
+    background:url(../images/jackOfDiamonds.PNG) no-repeat;
+}
+.quOfDi {
+    background:url(../images/queenOfDiamonds.PNG) no-repeat;
+}
+.kiOfDi {
+    background:url(../images/kingOfDiamonds.PNG) no-repeat;
+}
+/* Club */
+.acOfCl {
+    background:url(../images/aceOfClubs.PNG) no-repeat;
+}
+.twOfCl {
+    background:url(../images/twoOfClubs.PNG) no-repeat;
+}
+.thOfCl {
+    background:url(../images/threeOfClubs.PNG) no-repeat;
+}
+.foOfCl {
+    background:url(../images/fourOfClubs.PNG) no-repeat;
+}
+.fiOfCl {
+    background:url(../images/fiveOfClubs.PNG) no-repeat;
+}
+.siOfCl {
+    background:url(../images/sixOfClubs.PNG) no-repeat;
+}
+.seOfCl {
+    background:url(../images/sevenOfClubs.PNG) no-repeat;
+}
+.eiOfCl {
+    background:url(../images/eightOfClubs.PNG) no-repeat;
+}
+.niOfCl {
+    background:url(../images/nineOfClubs.PNG) no-repeat;
+}
+.teOfCl {
+    background:url(../images/tenOfClubs.PNG) no-repeat;
+}
+.jaOfCl {
+    background:url(../images/jackOfClubs.PNG) no-repeat;
+}
+.quOfCl {
+    background:url(../images/queenOfClubs.PNG) no-repeat;
+}
+.kiOfCl {
+    background:url(../images/kingOfClubs.PNG) no-repeat;
+}
